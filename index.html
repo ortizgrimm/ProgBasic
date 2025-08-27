@@ -3,19 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prog. Báica</title>
+    <link rel="icon" href="img/icono.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <title>Páginaweb</title>
 </head>
 <body>
-    <img src="img/profile.png" alt="imagen de perfil">
-    <button onclick="CambiarColor()">PRUEBA CODIGO JS</button>
-    <h1 id="title">DANILO ORTIZ</h1>
-    <h2>DANILO ORTIZ</H2>
-    <h3>DANILO ORTIZ</h3>
-    <h4>DANILO ORTIZ</H4>
-    <h5>DANILO ORTIZ</H5>
-    <h6>DANILO ORTIZ</H6>
+    <!-- Cabecera principal del sitio web -->
+    <header>
+        <h1>Guia De Etiquetas</h1>
+        <p>Estoy aprendiendo como usar etiquetas en html para estructurar un sitio web</p>
+    </header>
 
-    <script src="js/function.js"></script>
+    <!-- Menú de navegación -->
+      <nav class="menu_nav">
+        <ul>
+            <li><a href="">Encabezado</a></li>
+            <li><a href="">Contenido Principal</a></li>
+            <li><a href="">Pie de Página</a></li>
+            <!-- Menu desplegable  -->
+             <li class="menu_item">
+                <a href="">Etiquetas</a>
+                <ul class="submenu">
+                    <li><a href="">Etiquetas 1</a></li>
+                    <li><a href="">Etiquetas 1</a></li>
+                    <li><a href="">Etiquetas 1</a></li>
+                </ul>
+             </li>
+        </ul>
+     </nav>
+
+     <!-- Contenido Principal -->
+      <main>
+        <section>
+            <h2>¿Qué son las etiquetas semánticas?</h2>
+            <p>Las etiquetas semánticas en html sirven para definir una estructura clara de mi sitio web</p>
+        </section>
+        <section>
+            <h2>Tabla de etiquetas semánticas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;Head&gt;</code></td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;Nav&gt;</code></td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;Main&gt;</code></td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;Footer&gt;</code></td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;Aside&gt;</code></td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;Setion&gt;</code></td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;Article&gt;</code></td>
+                        <td>123</td>
+                    </tr>   
+                </tbody>
+            </table>
+        </section>
+      </main>
+
+      <!-- Pie de Página -->
+       <footer>
+        <p>Todos los derechos reservados - sitio creado por Danilo Ortiz - @2025</p>
+       </footer>
+
 </body>
 </html>
