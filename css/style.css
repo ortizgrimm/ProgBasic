@@ -38,12 +38,14 @@ text-align: center;
 .menu_nav ul li{
     display: inline-block;
     position: relative;
+    padding: 10px;
   
 }
 
 .menu_nav ul li a{
     color: aliceblue;
     text-decoration: none;
+    padding: 20px;
 }
 
 nav ul li a:hover{
@@ -57,7 +59,7 @@ nav ul li a:hover{
     left: 0;
     top: 100%;
     background-color: #333;
-    min-width: 200px;
+    min-width: 100px;
 }
 
 .menu_item:hover .submenu {
@@ -71,6 +73,7 @@ nav ul li a:hover{
 
 .submenu li a:hover {
     background-color: #555;
+    padding: 10px;
 }
 
 /* Estilo para footer  */
@@ -96,7 +99,7 @@ color: black;
 }
 
 table{
-    width: 100%;
+    width: 70%;
     border-collapse: collapse;
     margin-top: 20px;
     margin-left: auto;
@@ -109,9 +112,13 @@ table, th, td{
 
 th, td{
 padding: 10px;
-text-align: center;
+text-align:center;
 }
 
 thead{
     background-color: rgb(152, 158, 158);
+}
+
+.alinear_texto{
+    text-align: left;
 }
