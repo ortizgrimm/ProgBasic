@@ -127,3 +127,23 @@ thead{
     border-color: rgb(255, 255, 255);
     text-align: left;
 }
+
+.contenedor {
+  display: flex; /* Coloca los elementos uno al lado del otro */
+  align-items: center; /* Alinea los elementos verticalmente si tienen diferente altura */
+}
+
+.contenedor img {
+  margin-top: 35px;
+  width: 250px; /* Ajusta el tamaño de la imagen según necesites */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-right: 55px; /* Añade un espacio entre la imagen y el texto */
+}
+
+.contenedor p {
+  /* Estilos adicionales para el texto */
+  text-align: left;
+  font-weight: normal;
+}
+
+
