@@ -122,3 +122,8 @@ thead{
 .alinear_texto{
     text-align: left;
 }
+
+.bordetabla{
+    border-color: rgb(255, 255, 255);
+    text-align: left;
+}
