@@ -10,11 +10,13 @@
 <body>
  <!-- encabezado  -->
      <header>
-     <h1>Formulario de Contacto</h1>
+     Formulario de Contacto
      </header>
    
- <!-- Menú de navegación -->
-      <nav class="menu_nav">
+ 
+  <!-- Menú de navegación -->
+      <nav>
+        <div class="nav-brand">GRIMM</div>
         <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="">Encabezado</a></li>
@@ -32,40 +34,36 @@
                 </ul>
              </li>
         </ul>
-     </nav>
+     </nav> 
 
 <!-- Conteido formulario -->
  <main>
     <section>
         <h2>Formulario de Contacto</h2>
-        <form>
-            <label for="Nombre">Nombre:</label><br>
-            <input type="text" id="Nombre" name= "Nombre" required><br><br>
+<form action="#" method="post">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo" required>
 
-            <label for="Email">Email:</label><br>
-            <input type="text" id="Email" name= "Email" required><br><br>
+    <!-- Campo de Género con mismo estilo -->
+    <select name="genero" required>
+        <option value="">Selecciona tu género</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+    </select>
 
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea name="Mensaje" id="mensaje" rows="4" cols="40" required></textarea><br><br>
+    <textarea placeholder="Mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
 
-            <label for="Genero">Genero:</label><br>
-            <select name="Genero" id="Genero">
-                <option value="Femenio">Femenino</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Otro">Otro</option>
-            </select><br><br>
 
-            <input type="checkbox" id="Acepto" name="Acept" required>
-            <label for="Acepto">Acepto los terminos y condiciones</label><br><br>
 
-            <button type="Submit">Enviar</button>
-        </form>
     </section>
  </main>
 
-   <!-- Pie de Página -->
+      <!-- Pie de Página -->
        <footer>
-        <p>Todos los derechos reservados - sitio creado por Danilo Ortiz - @2025</p>
+        <p>Todos los derechos reservados - sitio creado por Danilo Ortiz - © 2025</p>
        </footer>
 
 </body>

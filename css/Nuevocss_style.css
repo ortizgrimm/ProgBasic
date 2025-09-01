@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0ffff;
+}
+
+h1 {
+    color: #0000ff;
+}
+
+p#color_p {
+    color: #ef0ea8;
+}
+
+p.color_p {
+    color: #73920e;
+}
+
+.color_p {
+    color: #8a2be2;
+}
+
+div#menu_nav > ul#opciones > li {
+    background-color: black;
+    color: aliceblue;
+}
+
+div#menu_nav > ul#opciones > li:hover {
+    background-color: #a0d6f3;
+    color: #000000;
+}
+
+

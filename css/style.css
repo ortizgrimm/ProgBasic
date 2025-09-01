@@ -1,14 +1,25 @@
 /* Estilos para etiquetas semanticas  */
 
 body{
-   font-family: Arial, sans-serif;
-   background-color: rgb(208, 208, 208);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    margin:  0;
    padding: 0;
-   background-image: url(https://img.freepik.com/vector-premium/moderna-tecnologia-plantilla-pancarta-cubos-textura-lineas-puntos_230610-1682.jpg);
-   background-size: contain;
-   background-repeat: repeat;
-   background-position: center;
+   position: relative;
+   line-height: 1.6;
+   padding: 20px;
+   background: none;
+}
+
+body::before {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url(https://static.vecteezy.com/system/resources/previews/013/614/661/non_2x/abstract-computer-technology-background-with-circuit-board-and-circle-tech-illustration-vector.jpg) center/cover no-repeat;
+   opacity: 0.5;   /* controla qué tan opaca se ve la imagen */
+   z-index: -1;    /* para que quede detrás del contenido */
 }
 
 main{
@@ -16,80 +27,132 @@ main{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #f5f5f5; /* gris claro */
+    padding: 20px;             /* espacio interno para que el texto no quede pegado */
+    border-radius: 8px;        /* esquinas redondeadas opcional */
+}
+
+main iframe {
+    max-width: 100%;   /* nunca será más ancho que el main */
+    height: auto;      /* mantiene proporción */
+    display: block;    /* elimina espacio extraño debajo */
+    margin: 0 auto;    /* centra el video */
 }
 
 header{
-background-color: rgb(49, 100, 144);
-color: rgb(255, 255, 255);
-padding: 20px;
-text-align: center;
+    background: linear-gradient(135deg, #1f41bc, #090b60);
+    color: rgb(255, 255, 255);
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-size: 35px;
+    font-weight: bold;
+    
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Estilo para el menú de navegación  */
+/* -------- Navegación -------- */
+nav {
+    background: #e4e5e8;
+    padding: 1px 2px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    display: flex;                /* Flexbox para dividir nav */
+    align-items: center;          /* centra verticalmente */
+    justify-content: space-between; /* separa texto a la izq y menú a la der */
 
-.menu_nav{
-    background-color: black;
-    text-align: center;
-    padding: 10px;
 }
 
-.menu_nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.nav-brand {
+    color: #292bd5;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-left: 50px;
 }
 
-.menu_nav ul li{
-    display: inline-block;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-right: 50px; 
+}
+
+nav ul li {
     position: relative;
-    padding: 10px;
-  
 }
 
-.menu_nav ul li a{
-    color: aliceblue;
+nav ul li a {
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    padding: 20px;
+    padding: 1px 4px;
+    display: block;
+    transition: all 0.3s ease;
+    font-weight: 450;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: left;
 }
 
-nav ul li a:hover{
-    text-decoration: underline;
-    color: rgb(101, 147, 238);
+nav ul li a:hover {
+    background: #d5d5d6;
+    transform: scale(1.05);
 }
 
-.submenu {
+/* -------- Submenú -------- */
+nav ul li ul {
     display: none;
     position: absolute;
-    left: 0;
     top: 100%;
-    background-color: #333;
-    min-width: 100px;
+    left: 0;
+    background: #e4e5e8;
+    border-radius: 6px;
+    min-width: 130px;
+    padding: 8px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000; /* aseguramos que esté sobre otros elementos */
 }
-
-.menu_item:hover .submenu {
+nav ul li:hover > ul,
+nav ul li:hover ul {
     display: block;
+    
 }
 
-.submenu li  {
+nav ul li ul li {
     width: 100%;
-    display: block;
 }
 
-.submenu li a:hover {
-    background-color: #555;
+nav ul li ul li a {
     padding: 10px;
+    font-size: 0.95rem;
+}
+
+nav ul li ul li a:hover {
+    background: #d5d5d6;
 }
 
 /* Estilo para footer  */
 
 footer{
-    background-color: rgb(101, 140, 180);
-    color: rgb(255, 255, 255);
+     background: linear-gradient(135deg,  #1f41bc, #090b60);
+    color: white;
     padding: 10px;
     text-align: center;
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-size: 15px;
 }
 
 footer p{
@@ -98,87 +161,208 @@ footer p{
 
 /* Estilo para tabla */
 
-h2{
-color: black;
-}
 
 table{
-    width: 70%;
+    width: 100%;
+    margin: 20px 0;
     border-collapse: collapse;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 18px;   /* redondea las esquinas */
+    overflow: hidden;      /* recorta lo que sobresalga */
 }
 
-table, th, td{
-    border: 1px solid rgb(0, 0, 0);
-}
 
-th, td{
-padding: 10px;
-text-align:center;
-}
-
-thead{
-    background-color: rgb(152, 158, 158);
-}
-
-.alinear_texto{
+th {
+    background: #2a3a72;
+    color: white;
+    padding: 12px;
     text-align: left;
+    font-size: 1.1rem;
+    text-transform: uppercase;  
 }
 
-.bordetabla{
-    border-color: rgb(255, 255, 255);
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #000000; /* azul petróleo */
+    color: white;
+    padding: 12px;
     text-align: left;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    
 }
 
-.contenedor {
-  display: flex; /* Coloca los elementos uno al lado del otro */
-  align-items: center; /* Alinea los elementos verticalmente si tienen diferente altura */
-}
-
-.contenedor img {
-  margin-top: 35px;
-  width: 250px; /* Ajusta el tamaño de la imagen según necesites */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin-right: 55px; /* Añade un espacio entre la imagen y el texto */
-}
-
-.contenedor p {
-  /* Estilos adicionales para el texto */
-  text-align: left;
-  font-weight: normal;
-}
-
-.RellenoCelda{
-    background-color: #f5f5f5;
-}
-
-#CeldaEncabezado{
-    background-color: rgb(101, 140, 180);
-    border-bottom-style: solid; /* O el estilo que prefieras */
-    border-bottom-width: 3px;   /* O el grosor que desees */
-    border-bottom-color: black; /* O el color que prefieras */
-    color: rgb(255, 255, 255);
-    padding: 15px;
-    text-align: center;
-}
-
-.celdas{
-    border-color: #ffffff00;
+/* -------- Títulos -------- */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #0f131f;
     text-align: left;
+    position: relative;
+    font-weight: bold;
+    padding-left: 20px;
 }
 
-#title{
-   color: rgb(101, 140, 180);
-   font-size: 30px;
+/* h2::after { 
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #2a3a72;
+    margin-top: 5px;
+    border-radius: 2px;
+   
+}*/
+
+h2::before {
+  content: "";
+  position: absolute;     /* la línea se posiciona en relación al h2 */
+  left: 0;                /* pegada al borde izquierdo */
+  top: 0;                 /* desde arriba */
+  width: 3px;             /* grosor de la línea */
+  height: 100%;           /* misma altura que el h2 */
+  background: #2a3a72;      /* color de la línea */
+  border-radius: 5px;
 }
 
-#subtitle{
-  font-size: 25px;  
-  padding: 20px;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-#bkcol{
-    background-color: #ffffff;
+table tbody tr:nth-child(even) {
+    background-color: #e2e3e5; /* gris claro */
 }
+
+
+table tbody tr:hover {
+    background-color: #e1e0fa; /* resalta al pasar el mouse */
+}
+
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* opcional, bordes redondeados */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+code {
+    background-color: #c5c5c2; 
+    color: #000000;           
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+main img {
+    max-width: 100%;  /* nunca más ancha que el main */
+    height: auto;     /* mantiene proporción */
+    display: block;   /* evita espacios extra debajo */
+    margin: 0 auto;   /* opcional: centra la imagen */
+    border-radius: 8px; /* opcional: esquinas redondeadas */
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #102d97;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #6478c0;
+}
+
+/* Contenedor de presentación */
+.presentacion {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+/* Imagen cuadrada */
+.presentacion img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #364c9a;
+    /* La foto es cuadrada, no redonda */
+}
+
+/* Información textual */
+.presentacion .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion .info h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #2a3a72;
+}
+
+.presentacion .info h2 {
+    margin: 5px 0 15px;
+    font-size: 1.2rem;
+    color: #6478c0;
+    font-weight: normal;
+}
+
+.presentacion .info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #0f131f;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentacion img {
+        margin-bottom: 15px;
+    }
+}
+

@@ -3,10 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icono.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Selectores css</title>
 </head>
 <body>
-    <link rel="icon" href="img/icono.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
-</body>
+     <!-- Cabecera principal del sitio web -->
+    <header>
+        Principales SElectores de CSS
+    </header>
+
+    <!-- Menú de navegación -->
+      <nav>
+        <div class="nav-brand">GRIMM</div>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="">Encabezado</a></li>
+            <li><a href="../html/Selectores.html">Selectores css</a></li>
+            <li><a href="../html/Propiedades.html">Propiedades css</a></li>
+            <li><a href="">Pie de Página</a></li>
+            <!-- Menu desplegable  -->
+             <li class="menu_item">
+                <a href="">Etiquetas</a>
+                <ul class="submenu">
+                    <li><a href="../html/Multimedia.html">Multimedia</a></li>
+                    <li><a href="../html/Receta.html">Receta</a></li>
+                    <li><a href="../html/FormularioContacto.html">Contacto</a></li>
+                    <li><a href="../html/PresentacionPersonal.html">Presentación</a></li>
+                </ul>
+             </li>
+        </ul>
+     </nav> 
+
+    <main>
+        <section>
+            <h2>¿Qué es un selector?</h2>
+            <p>Un selector CSS es la primera parte de una regla CSS. Es un patrón de elementos y otros términos que indican al navegador qué elementos HTML se seleccionan para aplicarles una regla que incluye los valores de las propiedades CSS. El elemento o los elementos seleccionados por el selector se denominan sujeto del selector.</p>
+            <div style="text-align: center;">
+            <img src="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/selector.png" alt="img">
+            </div>
+            <p>hay diversas maneras de organizar el documento. Por ejemplo, seleccionando un elemento, como <code>h1</code>, o seleccionando una clase, como <code>.special</code>En CSS, los selectores se definen en la especificación de selectores de CSS correspondiente; al igual que cualquier otro elemento de CSS, es necesario que los navegadores los admitan para que funcionen. La mayoría de los selectores que encontrarás se definen en especificación de nivel 3 de selectores, que es una especificación consolidada y, por lo tanto, la mayoría de navegadores admitirán esos selectores.</p>
+            <h2>Selectores CSS básicos</h2>
+            <p>Aunque el esquema completo es mucho más amplio, vamos a centrarnos en la sintaxis más básica de los selectores CSS, y en los siguientes temas continuaremos con temas más avanzados.</p>
+
+            <p>Empezaremos por selectores de etiqueta, id y clases:</p>
+            <div style="text-align: center;">
+               <img src="https://lenguajecss.com/css/selectores/selectores-basicos/sintaxis-basica.png" alt="">
+            </div>
+            <p>Un resumen de los tipos de selectores CSS básicos que veremos son los siguientes:</p>
+
+            <table>
+            <thead>
+                <tr>
+                    <th><strong>Selector</strong></th>
+                    <th><strong>Descripción</strong></th>
+                </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td><strong>div</strong></td>
+                    <td>Seleccionamos por etiqueta. Aplicamos estilos a todas las etiquetas que coincidan.</td>
+                </tr>
+                <tr>
+                    <td><strong>#page</strong></td>
+                    <td>Seleccionamos por ID. Aplicamos estilos al elemento que tenga ese <code>id</code>. Debería ser un único elemento.</td>
+                </tr>
+                <tr>
+                    <td><strong>.primary</strong></td>
+                    <td>Seleccionamos por clase. Aplicamos estilos a los elementos que tengan dicha <code>class</code>. Pueden existir varias.</td>
+                </tr>
+                <tr>
+                    <td><strong>button.primary</strong></td>
+                    <td>Mixto. Seleccionamos por múltiples criterios. En este caso, por elemento y por clase.</td>
+                </tr>
+            </tbody>
+        </table>
+
+<h2><span></span>3. Selectores<span></span></h2>
+<p>Existen muchos tipos de selectores y algunos de los más destacados son los que se detallan a continuación.</p>
+<h2>3.1. Selector universal</h2>
+<p><strong>Sintaxis: </strong>* { atributo:valor; } </p>
+<p><strong>Ejemplo:</strong><code> * { color: grey; }</code>/* El estilo se aplicará a todos los elementos de la página*/ </p>
+<p style="background-color:#c2cdd1">El <strong>selector universal (*)</strong> es útil cuando deseas aplicar un estilo a todos los elementos en una página web sin excepción. Es una forma rápida y sencilla de establecer reglas generales que afectarán a todos los elementos en el documento. Por ejemplo, si deseas eliminar todos los márgenes y rellenos predeterminados de los elementos en tu página para empezar desde cero, puedes usar el selector universal para restablecerlos.</p>
+<h2>3.2. Selector etiqueta</h2>
+<p><strong>Sintaxis:</strong> etiqueta { atributo:valor } </p>
+<p><strong>Ejemplo:</strong> <code>p {color: green;}&nbsp;</code> /* El estilo se aplicará a todos los elementos &lt;p&gt;.*/</p>
+<h2>3.3. Selector clase</h2>
+<p><strong>Sintaxis: </strong>.clase { atributo:valor }</p>
+<p><strong>Ejemplo:</strong> <code>.blend{color: red;}</code> /* El estilo se aplicará a cualquier elemento que tenga la clase .blend */</p>
+
+<p>Un elemento puede tener múltiples clases: <code>&lt;div class="blend otro-estilo">&lt;/div></code></p>
+<p>En este ejemplo, el elemento <code>&lt;div></code> tendrá los estilos definidos para ambas clases <code>.blend</code> y <code>.otro-estilo</code>.  Sin embargo, si hay propiedades CSS que se repiten en ambas clases, se aplicarán los estilos de la última clase declarada. Es decir, si tanto <code>.blend</code> como <code>.otro-estilo</code> definen la propiedad <code>color</code>, prevalecerá el color definido en <code>.otro-estilo</code> porque es la última clase definida. Esto proporciona un mecanismo para controlar la prioridad de los estilos cuando se aplican múltiples clases a un elemento.</p>
+<h2>3.4. Selector identificador</h2>
+<p>El <strong>selector identificador </strong>utiliza el atributo id para seleccionar un elemento. Solo puede haber un elemento con un id dado en un documento.</p>
+<p><strong>Sintaxis:</strong> #id { atributo:valor }</p>
+<p><strong>Ejemplo:</strong> <code>#cent  {color: blue;}</code> /* El estilo se aplicará al elemento que tenga el id #cent */<br></p>
+<h2>3.5. Selector descendiente</h2>
+<p>Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de apertura y de cierre del elemento padre. </p>
+<p><strong>Sintaxis: </strong>selector1 selector2 selectorN {atributo: valor;} /* El estilo se aplica sobre el selector N */</p>
+<p><strong>Ejemplo:</strong> <code>div p { color: black;}</code>  /* El estilo se aplica a todos los párrafos que se encuentren dentro de una etiqueta div */</p>
+<h2>3.6. Combinación de selectores</h2>
+<p>La combinación de selectores nos permite dar un estilo a todos los selectores indicados.</p>
+<p><strong>Sintaxis:</strong> selector1, selector2, selector3{atributo: valor;} /* El estilo se aplica sobre los selectores indicados */</p>
+<p><strong>Ejemplo:</strong> <code>div, p { color: orange;}</code> /* El estilo se aplica a todos los divs y párrafos */</p>
+<h2>3.7. Selector de hijos</h2>
+<p>Se usa para seleccionar un elemento que es&nbsp;<em>hijo</em>&nbsp;de otro elemento. </p>
+<p><strong>Sintaxis:</strong> selector1 &gt; selector2 {atributo: valor;}&nbsp; /* El estilo se aplica sobre el selector 2 */</p>
+<p><strong>Ejemplo:</strong> <code>div &gt; p { color: white;}</code> /* El estilo se aplica a todos los párrafos que sean hijos de un div */</p>
+<p style="background-color:#d2cfd1"><strong>Diferencia&nbsp;entre&nbsp;selector de hijos&nbsp;y selector descendiente</strong>. Los&nbsp;<strong>hijos</strong>&nbsp;son los elementos que se encuentran un nivel directamente debajo de el mismo elemento section. Los <strong>descendientes</strong>&nbsp;son todos los elementos que se encuentran dentro del elemento section sean los mismos&nbsp;<strong>hijos</strong>&nbsp;o los&nbsp;<strong>hijos</strong>&nbsp;de los&nbsp;<strong>hijos</strong>.</p>
+<h2>3.8. Selector adyacente</h2>
+<p>Se usa para seleccionar elementos que son&nbsp;<em>hermanos</em>, es decir, su elemento padre es el mismo y están seguidos en el código HTML. </p>
+<p><strong>Sintaxis:</strong> selector1 + selector2{ atributo: valor; } /* El estilo se aplica al selector 2 */</p>
+<p><strong>Ejemplo:</strong> <code>div + p { color: black;}</code> /* El estilo se aplica a todos los párrafos que sean hermanos de un div */</p>
+        </section>
+    </main>
+
+      <!-- Pie de Página -->
+       <footer>
+        <p>Todos los derechos reservados - sitio creado por Danilo Ortiz - © 2025</p>
+       </footer>
+       </body>
 </html>

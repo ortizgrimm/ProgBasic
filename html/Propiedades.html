@@ -10,11 +10,12 @@
 <body>
      <!-- Cabecera principal del sitio web -->
     <header>
-        <h1>Principales Propiedades de CSS</h1>
+        Principales Propiedades de CSS
     </header>
 
     <!-- Menú de navegación -->
-      <nav class="menu_nav">
+      <nav>
+        <div class="nav-brand">GRIMM</div>
         <ul>
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="">Encabezado</a></li>
@@ -32,228 +33,230 @@
                 </ul>
              </li>
         </ul>
-     </nav>
+     </nav>  
 
 <main>
     <section>
-    <section id="bkcol">
-        <h2 id="title"> <img src="../img/iconotabla.png" width="30" height="30"alt="">  Tabla resumen de propiedades CSS Nivel Inicial</h2>
-        <h2 id="subtitle">1.1 Propiedades de Color y Fondo</h2>
+    <section>
+        <h2>Tabla resumen de propiedades CSS Nivel Inicial</h2>
+        <h2>1.1 Propiedades de Color y Fondo</h2>
         <table>
+            <thead>
+                <tr>
+                    <th><strong>Propiedad</strong></th>
+                    <th><strong>Descripción</strong></th>
+                    <th><strong>Valores</strong></th>
+                </tr>
+                </thead>
             <tbody>
                 <tr>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Propiedad</strong></td>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Descripción</td></strong>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Valores</td></strong>
+                    <td><strong>Color</strong></td>
+                    <td>Color del texto</td>
+                    <td>RGB | HSL | HEX | nombre del color | RGBA | HSLA</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>Color</strong></td>
-                    <td class="celdas">Color del texto</td>
-                    <td class="celdas">RGB | HSL | HEX | nombre del color | RGBA | HSLA</td>
+                    <td><strong>background-color</strong></td>
+                    <td>Color del fondo</td>
+                    <td>RGB | HSL | HEX | nombre del color | RGBA | HSLA</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>background-color</strong></td>
-                    <td class="RellenoCelda celdas">Color del fondo</td>
-                    <td class="RellenoCelda celdas">RGB | HSL | HEX | nombre del color | RGBA | HSLA</td>
+                    <td><strong>background-image</strong></td>
+                    <td>Imagen de fondo</td>
+                    <td>url(«…») | none</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>background-image</strong></td>
-                    <td class="celdas">Imagen de fondo</td>
-                    <td class="celdas">url(«…») | none</td>
+                    <td><strong>background-repeat</strong></td>
+                    <td>Repetición de imagen de fondo</td>
+                    <td>repeat | repeat-x | repeat-y | no-repeat</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>background-repeat</strong></td>
-                    <td class="RellenoCelda celdas">Repetición de imagen de fondo</td>
-                    <td class="RellenoCelda celdas">repeat | repeat-x | repeat-y | no-repeat</td>
+                    <td><strong>background-attachment</strong></td>
+                    <td>Desplazamiento de imagen de fondo</td>
+                    <td>Auto | cover | contain | valor</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>background-attachment</strong></td>
-                    <td class="celdas">Desplazamiento de imagen de fondo</td>
-                    <td class="celdas">Auto | cover | contain | valor</td>
+                    <td><strong>background-position</strong></td>
+                    <td>posición de la imagen de fondo</td>
+                    <td>percentage | length | left | center | right</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>background-position</strong></td>
-                    <td class="RellenoCelda celdas">posición de la imagen de fondo</td>
-                    <td class="RellenoCelda celdas">percentage | length | left | center | right</td>
+                    <td><strong>background-size</strong></td>
+                    <td>Tamaño de la imagen de fondo</td>
+                    <td>auto | cover | contain | valor</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>background-size</strong></td>
-                    <td class="celdas">Tamaño de la imagen de fondo</td>
-                    <td class="celdas">auto | cover | contain | valor</td>
-                </tr>
-                <tr>
-                    <td class="RellenoCelda celdas"><strong>Opacity</strong></td>
-                    <td class="RellenoCelda celdas">Trnasparencia de un elemento</td>
-                    <td class="RellenoCelda celdas">[ 0 - 1 ] (0 → totalmente transparente)</td>
+                    <td><strong>Opacity</strong></td>
+                    <td>Trnasparencia de un elemento</td>
+                    <td>[ 0 - 1 ] (0 → totalmente transparente)</td>
                 </tr>
             </tbody>
         </table>
     
-        <h2 id="subtitle">1.2 Propiedades de Texto</h2>
+        <h2>1.2 Propiedades de Texto</h2>
         <table>
             <tbody>
                 <tr>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Propiedad</strong></td>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Descripción</td></strong>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Valores</td></strong>
+                    <th><strong>Propiedad</strong></th>
+                    <th><strong>Descripción</strong></th>
+                    <th><strong>Valores</strong></th>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>text-indent</strong></td>
-                    <td class="celdas">Desplazamiento de la primera línea del texto</td>
-                    <td class="celdas">longitud | porcentaje</td>
+                    <td><strong>text-indent</strong></td>
+                    <td>Desplazamiento de la primera línea del texto</td>
+                    <td>longitud | porcentaje</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>text-align</strong></td>
-                    <td class="RellenoCelda celdas">Alineamiento del texto</td>
-                    <td class="RellenoCelda celdas">Rleft | right | center | justify</td>
+                    <td><strong>text-align</strong></td>
+                    <td>Alineamiento del texto</td>
+                    <td>Rleft | right | center | justify</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>text-decoration	</strong></td>
-                    <td class="celdas">Efectos de subrayado y tachado	</td>
-                    <td class="celdas">none | underline | overline | line-through</td>
+                    <td><strong>text-decoration	</strong></td>
+                    <td>Efectos de subrayado y tachado	</td>
+                    <td>none | underline | overline | line-through</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>letter-spacing</strong></td>
-                    <td class="RellenoCelda celdas">Espacio entre caracteres</td>
-                    <td class="RellenoCelda celdas">Espacio entre caracteres</td>
+                    <td><strong>letter-spacing</strong></td>
+                    <td>Espacio entre caracteres</td>
+                    <td>Espacio entre caracteres</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>letter-spacing</strong></td>
-                    <td class="celdas">Espacio entre caracteres</td>
-                    <td class="celdas">normal | longitud</td>
+                    <td><strong>letter-spacing</strong></td>
+                    <td>Espacio entre caracteres</td>
+                    <td>normal | longitud</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>word-spacing</strong></td>
-                    <td class="RellenoCelda celdas">Espacio entre palabras</td>
-                    <td class="RellenoCelda celdas">normal | longitud</td>
+                    <td><strong>word-spacing</strong></td>
+                    <td>Espacio entre palabras</td>
+                    <td>normal | longitud</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>text-transform</strong></td>
-                    <td class="celdas">Transformación a mayúsculas / minúsculas</td>
-                    <td class="celdas">capitalize | uppercase | lowercase | none</td>
+                    <td><strong>text-transform</strong></td>
+                    <td>Transformación a mayúsculas / minúsculas</td>
+                    <td>capitalize | uppercase | lowercase | none</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>line-height</strong></td>
-                    <td class="RellenoCelda celdas">Tamaño del espacio entre líneas</td>
-                    <td class="RellenoCelda celdas">Tamaño del espacio entre líneas</td>
+                    <td><strong>line-height</strong></td>
+                    <td>Tamaño del espacio entre líneas</td>
+                    <td>Tamaño del espacio entre líneas</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2 id="subtitle">1.3 Colores Básicos</h2>
+        <h2>1.3 Colores Básicos</h2>
         <table>
             <tbody>
                 <tr>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Nombre</strong></td>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Hex</td></strong>
-                    <td id="CeldaEncabezado" class="celdas"><strong>RGBs</td></strong>
+                    <th><strong>Nombre</strong></th>
+                    <th><strong>Hex</th></strong>
+                    <th><strong>RGBs</th></strong>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>black</strong></td>
-                    <td class="celdas">black</td>
-                    <td class="celdas">0,0,0</td>
+                    <td><strong>black</strong></td>
+                    <td>black</td>
+                    <td>0,0,0</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>white</strong></td>
-                    <td class="RellenoCelda celdas">#ffffff</td>
-                    <td class="RellenoCelda celdas">255,255,255</td>
+                    <td><strong>white</strong></td>
+                    <td>#ffffff</td>
+                    <td>255,255,255</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>red</strong></td>
-                    <td class="celdas">#ff0000</td>
-                    <td class="celdas">255,0,0</td>
+                    <td><strong>red</strong></td>
+                    <td>#ff0000</td>
+                    <td>255,0,0</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>blue</strong></td>
-                    <td class="RellenoCelda celdas">#0000ff</td>
-                    <td class="RellenoCelda celdas">0,0,255</td>
+                    <td><strong>blue</strong></td>
+                    <td>#0000ff</td>
+                    <td>0,0,255</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>yellow</strong></td>
-                    <td class="celdas">#ffff00</td>
-                    <td class="celdas">255,255,0</td>
+                    <td><strong>yellow</strong></td>
+                    <td>#ffff00</td>
+                    <td>255,255,0</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>gray</strong></td>
-                    <td class="RellenoCelda celdas">#808080</td>
-                    <td class="RellenoCelda celdas">128,128,128</td>
+                    <td><strong>gray</strong></td>
+                    <td>#808080</td>
+                    <td>128,128,128</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>green</strong></td>
-                    <td class="celdas">#008000</td>
-                    <td class="celdas">0,128,0</td>
+                    <td><strong>green</strong></td>
+                    <td>#008000</td>
+                    <td>0,128,0</td>
                 </tr>
             </tbody>
         </table>
 
-         <h2 id="subtitle">1.4 Propiedades de Fuentes</h2>
+         <h2>1.4 Propiedades de Fuentes</h2>
         <table>
             <tbody>
                 <tr>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Propiedad</strong></td>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Descripción</td></strong>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Valores</td></strong>
+                    <th><strong>Propiedad</strong></th>
+                    <th><strong>Descripción</strong></th>
+                    <th><strong>Valores</strong></th>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>font-family</strong></td>
-                    <td class="celdas">Familias de fuentes</td>
-                    <td class="celdas">nombre-familia|nombre-familia-genérica| *</td>
+                    <td><strong>font-family</strong></td>
+                    <td>Familias de fuentes</td>
+                    <td>nombre-familia|nombre-familia-genérica| *</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>font-style</strong></td>
-                    <td class="RellenoCelda celdas">Estilo de la fuente</td>
-                    <td class="RellenoCelda celdas">normal | italic | oblique</td>
+                    <td><strong>font-style</strong></td>
+                    <td>Estilo de la fuente</td>
+                    <td>normal | italic | oblique</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>font-variant</strong></td>
-                    <td class="celdas">Convierte a mayúsculas manteniendo un tamaño inferior</td>
-                    <td class="celdas">normal | small-caps</td>
+                    <td><strong>font-variant</strong></td>
+                    <td>Convierte a mayúsculas manteniendo un tamaño inferior</td>
+                    <td>normal | small-caps</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>font-weight</strong></td>
-                    <td class="RellenoCelda celdas">Anchura de los caracteres. Normal = 400, Negrita = 700</td>
-                    <td class="RellenoCelda celdas">normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900</td>
+                    <td><strong>font-weight</strong></td>
+                    <td>Anchura de los caracteres. Normal = 400, Negrita = 700</td>
+                    <td>normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>font-size</strong></td>
-                    <td class="celdas">Tamaño de la fuente</td>
-                    <td class="celdas">xx-small | x-small | small | medium | large | x-large | xx-large | larger | smaller | longitud | porcentaje</td>
+                    <td><strong>font-size</strong></td>
+                    <td>Tamaño de la fuente</td>
+                    <td>xx-small | x-small | small | medium | large | x-large | xx-large | larger | smaller | longitud | porcentaje</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2 id="subtitle">1.5 Propiedades de Tablas</h2>
+        <h2>1.5 Propiedades de Tablas</h2>
         <table>
             <tbody>
                 <tr>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Propiedad</strong></td>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Descripción</td></strong>
-                    <td id="CeldaEncabezado" class="celdas"><strong>Valores</td></strong>
+                    <th><strong>Propiedad</strong></th>
+                    <th><strong>Descripción</strong></th>
+                    <th><strong>Valores</strong></th>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>list-style-type</strong></td>
-                    <td class="celdas">Estilo aplicable a los marcadores visuales o viñetas de las listas</td>
-                    <td class="celdas">disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none</td>
+                    <td><strong>list-style-type</strong></td>
+                    <td>Estilo aplicable a los marcadores visuales o viñetas de las listas</td>
+                    <td>disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>list-style-image</strong></td>
-                    <td class="RellenoCelda celdas">Imagen aplicable a las viñetas de las listas</td>
-                    <td class="RellenoCelda celdas">url(«…») | none</td>
+                    <td><strong>list-style-image</strong></td>
+                    <td>Imagen aplicable a las viñetas de las listas</td>
+                    <td>url(«…») | none</td>
                 </tr>
                 <tr>
-                    <td class="celdas"><strong>list-style-position</strong></td>
-                    <td class="celdas">Posición de las viñetas dentro de la lista</td>
-                    <td class="celdas">inside | outside</td>
+                    <td><strong>list-style-position</strong></td>
+                    <td>Posición de las viñetas dentro de la lista</td>
+                    <td>inside | outside</td>
                 </tr>
                 <tr>
-                    <td class="RellenoCelda celdas"><strong>list-style</strong></td>
-                    <td class="RellenoCelda celdas">Permite establecer varios estilos de la lista en una sola propiedad</td>
-                    <td class="RellenoCelda celdas">list-style-type | list-style-position | list-style-image</td>
+                    <td><strong>list-style</strong></td>
+                    <td>Permite establecer varios estilos de la lista en una sola propiedad</td>
+                    <td>list-style-type | list-style-position | list-style-image</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2 id="subtitle">1.6 Modelo de cajas: márgenes, relleno y bordes</h2>
+        <h2>1.6 Modelo de cajas: márgenes, relleno y bordes</h2>
         <div style="text-align: center;">
         <img src="https://www.eniun.com/wp-content/uploads/Propiedades-cajas-y-contenedores-en-CSS.png" width="500" height="400" alt="">
         </div>
