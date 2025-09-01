@@ -8,11 +8,16 @@ Este es un proyecto que utiliza tecnologías como **HTML**, **CSS** y **Javascri
 ├── readme.md                 # Información del proyecto
 ├── html/
 │   ├── primerejercicio.html  # 
-│   ├── .html                 # 
-│   └── .html                 # 
+│   ├── Selectores.html                 # 
+│   └── Receta.html                 #
+│   ├── Propiedades.html                 # 
+│   └── PresentacionPersonal.html                 #
+│   ├── Multimedia.html                 # 
+│   └── FormularioContacto.html                 #
+│   ├── Ejercicioscss.html                 # 
 ├── css/
 │   └── style.css             # Hoja de estilos externa común a todas las páginas
-│   └── .css                  # Script para aprender estilos de css
+│   └── Nuevocss_style.css                  # Script para aprender estilos de css
 └── js/
     ├── function.js           # Script que contiene lógica de javascript
     └── .js                   # Script para aprender js
