@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icono.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Eventos Js</title>
+</head>
+<body>
+    <!-- Cabecera principal del sitio web -->
+    <header>Eventos Js</header>
+
+    <!-- Menú de navegación -->
+      <nav>
+          <div class="nav-brand">GRIMM</div>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="">Encabezado</a></li>
+            <li><a href="../html/Selectores.html">Selectores css</a></li>
+            <li><a href="../html/Propiedades.html">Propiedades css</a></li>
+            <li><a href="">Pie de Página</a></li>
+            <!-- Menu desplegable  -->
+             <li class="submenu">
+                <a href="#">Etiquetas</a>
+                <ul class="submenu">
+                    <li><a href="../html/Multimedia.html">Multimedia</a></li>
+                    <li><a href="../html/Receta.html">Receta</a></li>
+                    <li><a href="../html/FormularioContacto.html">Contacto</a></li>
+                    <li><a href="../html/PresentacionPersonal.html">Presentación</a></li>
+                    <li><a href="../html/Ejercicioscss.html">Ejercicios Css</a></li>
+                    <li><a href="../html/EventosJs.html">Eventos Js</a></li>
+                </ul>
+             </li>
+             <li>
+                <button onclick="ejemfuncion()" >JavaScript</button>
+                <button ondblclick="funciondbl()" >Js DBL</button>
+             </li>
+        </ul>
+     </nav>
+
+     <main>
+        <section>
+           <form action="#">
+            <button onclick="ejemfuncion()" type="submit" >JavaScript</button>
+            <button ondblclick="funciondbl()" type="submit">Js DBL</button>
+           </form> 
+        <section>
+           <div onmouseover="ejemMouseover()" style="width:200px; height:100px; background-color:rgb(180, 197, 231); text-align:center; line-height:100px;">
+  Pasa el mouse por aquí</div>
+        </section>
+           <input type="text" onkeydown="ejemKeydown(event)" placeholder="Presiona una tecla">
+           <img src="https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg" onload="ejemLoad()" alt="Imagen">
+        </section>
+
+        <p><select onchange="ejemChange(this)">
+            <option value="">Selecciona una fruta</option>
+            <option value="Manzana">Manzana</option>
+            <option value="Banana">Banana</option>
+            <option value="Naranja">Naranja</option>
+        </select>
+        Ejemplo con select (lista desplegable)</p>
+
+        <section>   
+        <p><input type="text" onfocus="ejemFocus()" placeholder="Haz clic aquí">
+        Evento onfocus – Cuando un input gana foco (el usuario hace clic en él)</p>
+        </section>
+
+        <section>
+           <p><input type="text" onblur="ejemBlur()" placeholder="Escribe algo y sal del campo">
+            Evento onblur: Cuando un input pierde el foco (el usuario hace clic fuera)</p>
+        </section>
+
+        <section>
+            <p><input type="text" oninput="ejemInput(this)" placeholder="Escribe algo">
+            Evento oninput: Cuando el usuario escribe (cada letra que escribe)</p>
+        </section>
+
+        <section>
+            <p><input type="color" onchange="ejemColor(this)">
+            Evento onchange con input type="color":  Al cambiar el color</p>
+        </section>
+
+        <body onresize="ejemResize()">
+            <!-- Evento onresize – Cuando se cambia el tamaño de la ventana -->
+
+        <p><form onsubmit="return ejemSubmit()">
+        <input type="text" placeholder="Escribe tu nombre" required>
+        <button type="submit">Enviar</button>
+        </form>
+        Evento onsubmit: Cuando se envía un formulario</p>
+
+     </main>
+     <script>
+            function ejemfuncion(){
+                alert("Hola Estoy Funcionando");
+            }
+
+            function funciondbl(){
+                alert("Hola Con Boble Click");
+            }
+
+            function ejemMouseover() {
+                alert("¡Estás pasando el mouse por encima!");
+            }
+
+             function ejemKeydown(event) {
+                alert("Presionaste la tecla: " + event.key);
+            }
+
+             function ejemLoad() {
+                 alert("¡La imagen se ha cargado!");
+            }
+
+              // Función que se ejecuta cuando cambia el valor del select
+              function ejemChange(elemento) {
+             // Mostramos el valor seleccionado con un alert
+                 alert("Seleccionaste: " + elemento.value);
+            }
+
+            function ejemFocus() {
+                alert("¡El input tiene el foco!");
+            }
+
+            function ejemBlur() {
+                alert("¡Saliste del input!");
+            }
+
+            function ejemInput(elemento) {
+                alert("Estás escribiendo: " + elemento.value);
+            }
+
+            function ejemColor(elemento) {
+                  alert("Color seleccionado: " + elemento.value);
+            }
+
+             function ejemResize() {
+             alert("¡Has cambiado el tamaño de la ventana!");
+            }
+
+            function ejemSubmit() {
+            alert("Formulario enviado!");
+            return false;  // Para evitar que la página se recargue
+            }
+       </script>
+
+
+</body>
+</html>
