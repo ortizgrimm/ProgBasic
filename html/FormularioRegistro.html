@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="../css/FormularioRegistro.css">
+    <title>Formulario de Registro</title>
+</head>
+<body>
+<div class="container">
+    <form action="#" method="POST">
+    <h2>Formulario de Registro</h2>
+
+    <label for="nombres">Nombres:</label>
+    <input type="text" id="nombres" name="nombres" placeholder="Nombres" required onblur="validarYFormatearTexto(this)">
+
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required onblur="validarYFormatearTexto(this)">
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" required>
+        <option value="">Seleccione...</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+    </select>
+
+    <label for="tipo_id">Tipo de Identificación:</label>
+    <select id="tipo_id" name="tipo_id" required>
+        <option value="">Seleccione...</option>
+        <option value="cc">Cédula de Ciudadanía</option>
+        <option value="ce">Cédula de Extranjería</option>
+        <option value="ti">Tarjeta de Identidad</option>
+        <option value="pasaporte">Pasaporte</option>
+    </select>
+
+    <label for="identificacion">Número de Identificación:</label>
+    <input type="text" id="identificacion" name="identificacion" placeholder="Número de Identificación" required onkeydown="soloNumeros(event)">
+
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="Correo" required>
+
+    <label for="confirmar_correo">Confirmar Correo Electrónico:</label>
+    <input type="email" id="confirmar_correo" name="confirmar_correo" placeholder="Confirmar correo" required>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" placeholder="Direccion" placeholder="Dirección" required>
+
+    <label for="celular">Celular:</label>
+    <input type="text" id="celular" name="celular" placeholder="Ej: 3001234567" required pattern="[0-9]{10}" onkeydown="soloNumeros(event)">
+
+    <label for="password">Contraseña:</label>
+    <div class="inputs">
+    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+    <i class="fas fa-eye toggle_password" id="toggle_password"></i>
+    </div>
+
+    <label for="confirmar_password">Confirmar Contraseña:</label>
+    <div class="inputs">
+    <input type="password" id="cpassword" name="cpassword" placeholder="Confirmar Contraseña" required>
+    <i class="fas fa-eye toggle_password" id="toggle_cpassword"></i>
+    </div>
+
+    <button type="button" id="btnvalidar">Registrarse</button>
+    </form>
+<div id="resultado" class="resultado"></div>
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script src="../js/FormularioRegistro.js"></script>
+</body>
+</html>
